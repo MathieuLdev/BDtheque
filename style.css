@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./assets/light_color_background.jpg) center/cover fixed;
+    width: 100%;
+    height: 100vh;
+    color: whitesmoke;
+}
+
+#bd-container {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.un-album {
+    display: grid;
+    grid-template-columns: 3fr 1fr 2fr;
+    border: 3px solid rgb(0, 0, 0);
+    margin: 10px auto;
+}
+
+.un-album img {
+    width: 150px;
+}
