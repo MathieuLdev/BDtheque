@@ -49,7 +49,8 @@ body {
     border-radius: 150px;
     background: url(./assets/cart.png) no-repeat;
     background-size: cover;
-    transition: 0.2s;
+    box-shadow: -4px 4px 4px 2px black;
+    transition: 0.3s ease-out;
 }
 
 #ajoutPanier:hover {
@@ -86,4 +87,9 @@ body {
     #ajoutPanier {
         grid-area: c;
     }
+}
+
+#carousel img {
+    width: 130px;
+    height: 180px;
 }
