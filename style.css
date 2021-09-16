@@ -89,7 +89,22 @@ body {
     }
 }
 
-#carousel img {
-    width: 130px;
-    height: 180px;
+#gridGallery {
+    overflow-x: hidden;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(7, 150px);
+    grid-template-areas: 
+        "a b c d e f g"
+        "h i j k l m n"
+        "o p q r s t u";
+    transition: 0.8s;
 }
+
+#gridGallery img {
+    width: 150px;
+    height: 180px;
+    transition: 0.8s;
+    animation: anim 1s;
+}
+
