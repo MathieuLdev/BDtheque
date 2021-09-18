@@ -105,6 +105,18 @@ body {
     width: 150px;
     height: 180px;
     transition: 0.8s;
-    animation: anim 1s;
+    animation: anim 3s;
+}
+
+
+@keyframes anim {
+    from {
+        opacity: 0.2;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
