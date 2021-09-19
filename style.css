@@ -11,9 +11,12 @@ body {
     color: #fff;
 }
 
+/**************************** main content display *****************************/
+
 #bd-container {
     width: 80%;
     margin: 10px auto;
+    font-size: 1.8rem;
 }
 
 .un-album {
@@ -28,10 +31,6 @@ body {
 
 .un-album img {
     width: 150px;
-}
-
-.info {
-    font-size: 1.8rem;
 }
 
 .serie {
@@ -69,25 +68,23 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-
     .un-album {
         grid-template:
             "a a"
             "b c";
     }
-
     .info {
         grid-area: a;
     }
-
     .minImg {
         grid-area: b;
     }
-
     #ajoutPanier {
         grid-area: c;
     }
 }
+
+/*********************************** Gallery **********************************/
 
 #gridGallery {
     overflow-x: hidden;
@@ -105,14 +102,14 @@ body {
     width: 150px;
     height: 180px;
     transition: 0.8s;
-    animation: anim 3s;
+    animation: anim 3s ease-out;
 }
 
 
 @keyframes anim {
     from {
         opacity: 0.2;
-        transform: scale(0.7);
+        transform: scale(0.6);
     }
     to {
         opacity: 1;
@@ -120,3 +117,26 @@ body {
     }
 }
 
+/*********************************** Combobox *************************************/
+
+.filter {
+    display: flex;
+    width: 80%;
+    margin: 15px auto;
+}
+
+select {
+    height: 35px;
+    width: 250px;
+    font-size: 1.3rem;
+    background: rgba(8, 8, 48, 0.932);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 auto;
+}
+
+#reset {
+    width: 150px;
+    height: 35px;
+}
