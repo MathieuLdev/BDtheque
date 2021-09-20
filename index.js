@@ -87,24 +87,28 @@ for (let i = 0; i < 21; i++) {
 
 
 // Function that remove an image of the gallery and replace it randomly with another one
-const galleryDynamic = () => {
-    let rand = Math.floor(Math.random() * 21);
-    let imgDisplay = document.getElementById("img" + rand);
+setTimeout(() => {
+    const galleryDynamic = () => {
+        let rand = Math.floor(Math.random() * 21);
+        let imgDisplay = document.getElementById("img" + rand);
+    
+        imgDisplay.remove();
+    
+        let random =  Math.floor(Math.random() * arraySrc.length);
+        let imgReplace = document.createElement('img');
+        const gallery = document.getElementById('gridGallery');
+    
+        imgReplace.src = arraySrc[random];
+    
+        gallery.appendChild(imgReplace);
+        let alphabet = (rand+10).toString(35);
+        imgReplace.setAttribute("id", "img" + rand);
+        imgReplace.style.gridArea = alphabet;
+    }
+    setInterval(galleryDynamic, 2500);
+    
+}, 3000);
 
-    imgDisplay.remove();
-
-    let random =  Math.floor(Math.random() * arraySrc.length);
-    let imgReplace = document.createElement('img');
-    const gallery = document.getElementById('gridGallery');
-
-    imgReplace.src = arraySrc[random];
-
-    gallery.appendChild(imgReplace);
-    let alphabet = (rand+10).toString(35);
-    imgReplace.setAttribute("id", "img" + rand);
-    imgReplace.style.gridArea = alphabet;
-}
-setInterval(galleryDynamic, 4000);
 
 
 // Populate the combobox
@@ -114,8 +118,8 @@ const seriePopulate = (value) => {
     serieFilter.length++;
     serieFilter.options[serieFilter.length - 1].text = value.nom;
 }
-
 series.forEach(seriePopulate);
+
 
 
 // Displaying the albums according to the combobox selected
